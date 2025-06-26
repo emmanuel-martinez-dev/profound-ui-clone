@@ -1,0 +1,15 @@
+# Rho
+
+Rho is a data analytics platform focused on enhancing brand visibility and industry ranking, particularly in the context of business credit cards. It offers insights into the performance of various brands across different time spans, allowing users to assess how they stack up against their competitors. The tool is designed for businesses seeking to understand their market presence and improve their visibility in the financial industry.
+
+## Home
+
+The Home page provides users with an overview of brand visibility metrics related to business credit cards. It features data on how frequently Rho and its competitors are mentioned in AI-generated answers, highlighting shifts in visibility over time.
+
+Key features include:
+- **Visibility Scores:** A measure of the percentage of AI answers mentioning Rho and competing brands.
+- **Brand Industry Ranking:** A ranking of brands based on visibility, showing Rho's position relative to competitors like Chase and American Express.
+- **Topic Visibility:** Insights into performance across different business topics and metrics.
+
+### Links
+- [Rho](https://www.rho.com) - Main website for more information and access to the platform.

@@ -1,0 +1,364 @@
+{
+    "design_system": {
+      "name": "Analytics Dashboard Design System",
+      "version": "1.0.0",
+      "theme": {
+        "mode": "dark",
+        "colors": {
+          "primary": {
+            "background": "#0a0a0a",
+            "surface": "#1a1a1a",
+            "surface_elevated": "#2a2a2a",
+            "border": "#333333",
+            "text_primary": "#ffffff",
+            "text_secondary": "#a0a0a0",
+            "text_muted": "#666666"
+          },
+          "accent": {
+            "success": "#22c55e",
+            "danger": "#ef4444",
+            "warning": "#f59e0b",
+            "info": "#3b82f6"
+          },
+          "brand_colors": {
+            "chase": "#0066cc",
+            "american_express": "#006fcf",
+            "capital_one": "#004879",
+            "us_bank": "#c41e3a",
+            "bill": "#ff6b35"
+          }
+        },
+        "typography": {
+          "font_family": "system-ui, -apple-system, sans-serif",
+          "font_weights": {
+            "normal": 400,
+            "medium": 500,
+            "semibold": 600,
+            "bold": 700
+          },
+          "font_sizes": {
+            "xs": "0.75rem",
+            "sm": "0.875rem",
+            "base": "1rem",
+            "lg": "1.125rem",
+            "xl": "1.25rem",
+            "2xl": "1.5rem",
+            "3xl": "1.875rem",
+            "4xl": "2.25rem"
+          }
+        },
+        "spacing": {
+          "xs": "0.25rem",
+          "sm": "0.5rem",
+          "md": "1rem",
+          "lg": "1.5rem",
+          "xl": "2rem",
+          "2xl": "3rem"
+        },
+        "border_radius": {
+          "sm": "0.25rem",
+          "md": "0.375rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem"
+        }
+      },
+      "layout": {
+        "sidebar": {
+          "width": "280px",
+          "background": "surface",
+          "border_right": "1px solid border",
+          "padding": "lg",
+          "structure": {
+            "header": {
+              "brand_logo": {
+                "size": "24px",
+                "margin_bottom": "xl"
+              }
+            },
+            "navigation": {
+              "item_height": "44px",
+              "item_padding": "sm lg",
+              "item_margin": "xs 0",
+              "item_border_radius": "md",
+              "active_background": "surface_elevated",
+              "hover_background": "rgba(255,255,255,0.05)"
+            },
+            "sections": [
+              {
+                "type": "primary_nav",
+                "items": ["Home", "Search", "Inbox"]
+              },
+              {
+                "type": "section_header",
+                "label": "Metrics",
+                "margin_top": "xl"
+              },
+              {
+                "type": "secondary_nav",
+                "items": ["Industry", "Topic", "Model", "Citation", "Improve"]
+              }
+            ]
+          }
+        },
+        "main_content": {
+          "padding": "xl",
+          "max_width": "none",
+          "structure": {
+            "header": {
+              "breadcrumb": {
+                "font_size": "sm",
+                "color": "text_muted",
+                "separator": "›",
+                "margin_bottom": "md"
+              },
+              "title": {
+                "font_size": "3xl",
+                "font_weight": "bold",
+                "color": "text_primary",
+                "margin_bottom": "xl"
+              },
+              "filters": {
+                "display": "flex",
+                "gap": "sm",
+                "margin_bottom": "2xl",
+                "items": [
+                  {
+                    "type": "time_filter",
+                    "options": ["Last 24 hours", "Last 7 days", "Last 30 days", "Custom range"]
+                  },
+                  {
+                    "type": "action_buttons",
+                    "alignment": "right",
+                    "buttons": ["All models", "Region", "Filter"]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "components": {
+        "cards": {
+          "base": {
+            "background": "surface",
+            "border": "1px solid border",
+            "border_radius": "lg",
+            "padding": "xl",
+            "margin_bottom": "xl"
+          },
+          "metric_card": {
+            "extends": "base",
+            "structure": {
+              "header": {
+                "title": {
+                  "font_size": "lg",
+                  "font_weight": "semibold",
+                  "color": "text_primary",
+                  "margin_bottom": "sm"
+                },
+                "subtitle": {
+                  "font_size": "sm",
+                  "color": "text_secondary",
+                  "margin_bottom": "xl"
+                }
+              },
+              "metric": {
+                "value": {
+                  "font_size": "4xl",
+                  "font_weight": "bold",
+                  "color": "text_primary",
+                  "margin_bottom": "sm"
+                },
+                "change_indicator": {
+                  "font_size": "sm",
+                  "display": "flex",
+                  "align_items": "center",
+                  "gap": "xs",
+                  "positive_color": "success",
+                  "negative_color": "danger"
+                }
+              }
+            }
+          }
+        },
+        "buttons": {
+          "base": {
+            "font_size": "sm",
+            "font_weight": "medium",
+            "padding": "sm md",
+            "border_radius": "md",
+            "border": "1px solid border",
+            "background": "surface",
+            "color": "text_secondary",
+            "cursor": "pointer",
+            "transition": "all 0.2s ease"
+          },
+          "variants": {
+            "primary": {
+              "background": "accent.info",
+              "color": "white",
+              "border_color": "accent.info"
+            },
+            "ghost": {
+              "background": "transparent",
+              "hover_background": "surface_elevated"
+            }
+          }
+        },
+        "charts": {
+          "line_chart": {
+            "background": "transparent",
+            "grid_color": "rgba(255,255,255,0.1)",
+            "line_color": "success",
+            "line_width": "2px",
+            "area_fill": "rgba(34,197,94,0.1)",
+            "point_radius": "3px",
+            "axis_label_color": "text_muted",
+            "axis_label_size": "xs"
+          }
+        },
+        "ranking_list": {
+          "item": {
+            "display": "flex",
+            "align_items": "center",
+            "padding": "md 0",
+            "border_bottom": "1px solid border",
+            "structure": {
+              "rank": {
+                "width": "24px",
+                "font_weight": "medium",
+                "color": "text_muted"
+              },
+              "icon": {
+                "size": "20px",
+                "margin": "0 md"
+              },
+              "name": {
+                "flex": "1",
+                "font_weight": "medium",
+                "color": "text_primary"
+              },
+              "change": {
+                "font_size": "sm",
+                "margin_right": "md",
+                "display": "flex",
+                "align_items": "center",
+                "gap": "xs"
+              },
+              "value": {
+                "font_weight": "semibold",
+                "color": "text_primary"
+              }
+            }
+          }
+        },
+        "navigation": {
+          "sidebar_item": {
+            "display": "flex",
+            "align_items": "center",
+            "padding": "sm lg",
+            "border_radius": "md",
+            "color": "text_secondary",
+            "font_size": "sm",
+            "font_weight": "medium",
+            "cursor": "pointer",
+            "transition": "all 0.2s ease",
+            "states": {
+              "hover": {
+                "background": "rgba(255,255,255,0.05)",
+                "color": "text_primary"
+              },
+              "active": {
+                "background": "surface_elevated",
+                "color": "text_primary"
+              }
+            },
+            "icon": {
+              "size": "16px",
+              "margin_right": "sm"
+            }
+          }
+        },
+        "icons": {
+          "style": "outline",
+          "weight": "1.5px",
+          "size_variants": {
+            "sm": "16px",
+            "md": "20px",
+            "lg": "24px"
+          }
+        }
+      },
+      "patterns": {
+        "dashboard_grid": {
+          "display": "grid",
+          "gap": "xl",
+          "grid_template_columns": {
+            "desktop": "2fr 1fr",
+            "tablet": "1fr",
+            "mobile": "1fr"
+          }
+        },
+        "metric_display": {
+          "large_number": {
+            "font_size": "4xl",
+            "font_weight": "bold",
+            "line_height": "1"
+          },
+          "percentage_indicator": {
+            "display": "inline-flex",
+            "align_items": "center",
+            "gap": "xs",
+            "font_size": "sm",
+            "font_weight": "medium"
+          }
+        },
+        "data_visualization": {
+          "chart_container": {
+            "min_height": "300px",
+            "padding": "md 0"
+          },
+          "responsive_behavior": {
+            "mobile": {
+              "chart_height": "200px",
+              "font_size_reduction": "0.875"
+            }
+          }
+        }
+      },
+      "responsive": {
+        "breakpoints": {
+          "sm": "640px",
+          "md": "768px",
+          "lg": "1024px",
+          "xl": "1280px"
+        },
+        "sidebar_behavior": {
+          "desktop": "fixed_left",
+          "tablet": "collapsible",
+          "mobile": "overlay"
+        }
+      },
+      "animations": {
+        "transitions": {
+          "fast": "0.15s ease-out",
+          "normal": "0.2s ease-out",
+          "slow": "0.3s ease-out"
+        },
+        "hover_effects": {
+          "button": "transform: translateY(-1px)",
+          "card": "box-shadow: 0 8px 25px rgba(0,0,0,0.15)"
+        }
+      },
+      "accessibility": {
+        "focus_visible": {
+          "outline": "2px solid accent.info",
+          "outline_offset": "2px"
+        },
+        "color_contrast": {
+          "text_on_background": "4.5:1 minimum",
+          "interactive_elements": "3:1 minimum"
+        }
+      }
+    }
+  }
