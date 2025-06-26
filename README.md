@@ -2,7 +2,7 @@
 
 A UI clone of [TryProfound.com](https://tryprofound.com) analytics dashboard, built with **Cursor AI** and **Next.js 15**, featuring a dark theme and responsive design.
 
-> **Note**: This is a recreation of the TryProfound analytics interface for educational purposes, demonstrating modern web development practices with AI-assisted development tools.
+> **Note**: This is a recreation of the Profound analytics interface for educational purposes, demonstrating modern web development practices with AI-assisted development tools.
 
 ## 🚀 Tech Stack
 
